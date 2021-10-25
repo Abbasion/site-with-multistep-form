@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thank You</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="thankyou.css" type='text/css'>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="thankyou-page">
+    <div class="_header">
+        <div class="logo">
+            <img src="https://codexcourier.com/images/banner-logo.png" alt="">
+        </div>
+        <h1>Thank You!</h1>
+    </div>
+    <div class="_body">
+        <div class="_box">
+            <h2>
+                <strong>One of our partners will reach out to you</strong> for further instructions on how to help save energy with you.
+            </h2>
+            <p>
+                -
+            </p>
+        </div>
+    </div>
+    <div class="_footer">
+<iframe src="" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+        <p>Having trouble? <a href="#">Contact us</a> </p><br>
+        <a class="btn" href="#">Back to homepage</a>
+    </div>
+</div>
+</body>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const rid = urlParams.get('rid')
+    console.log("rid= ",rid);
+    let postback="https://eeltracklp.leadspediatrack.com/pixel.do?t=pb&request_id="+rid;
+    document.getElementById('postback').src = postback;
+    
+    
+    console.log("postback=",document.getElementById('postback').src);
+    console.log("postback=",postback);
+</script>
+</html>
+
+
+
